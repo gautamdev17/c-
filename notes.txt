@@ -1,0 +1,10 @@
+tf does a compiler do?
+
+compiler translates human source code into machine code
+
+1. front end: it reads text code, checks for syntax
+2. middle end: optimizes logic, simplifies math
+3. back end: translates optimized logic to binary machine code
+
+what are objects and variables?
+
