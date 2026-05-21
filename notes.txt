@@ -1,3 +1,5 @@
+20-05-2026
+
 tf does a compiler do?
 
 compiler translates human source code into machine code
@@ -7,4 +9,6 @@ compiler translates human source code into machine code
 3. back end: translates optimized logic to binary machine code
 
 what are objects and variables?
+
+21-05-2026
 
