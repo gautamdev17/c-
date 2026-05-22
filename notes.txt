@@ -8,7 +8,50 @@ compiler translates human source code into machine code
 2. middle end: optimizes logic, simplifies math
 3. back end: translates optimized logic to binary machine code
 
+21-05-2026
 what are objects and variables?
 
-21-05-2026
+objects are used as a thing to store stuff in memory
+
+22-05-2026
+The basic extraction process 
+
+core concept of input buffer the std::cin>>{
+
+    # C++ INPUT BUFFER NOTES
+
+1. THE BUFFER CONCEPT
+- Keyboard input sits in a temporary queue (the buffer).
+- std::cin only pauses if this buffer is completely empty.
+- Typing "that" for a char extracts 't' and leaves "hat" behind.
+- The next std::cin instantly reads the leftover "hat".
+
+2. THE FAIL STATE
+- Reading text (like 'h') into an int crashes the stream.
+- This "fail state" locks std::cin, skipping all future inputs.
+- Untouched variables keep their default value (0).
+
+example code:
+#include <iostream>
+
+int main() {
+    char ch{};
+    int num{};
+
+    std::cout << "Enter letter: ";
+    std::cin >> ch;   // Type "that" -> 't' goes to ch, "hat\n" sits in buffer
+
+    std::cout << "Enter number: ";
+    std::cin >> num;  // Reads 'h' from buffer -> Crashes stream -> Sets num to 0
+
+    std::cout << "ch: " << ch << ", num: " << num << "\n";
+    return 0;
+}
+
+
+3. THE 2-LINE FIX
+std::cin.clear();             // Unfreezes cin after an error
+std::cin.ignore(10000, '\n'); // Flushes out leftover buffer text
+
+}
 
