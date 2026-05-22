@@ -55,3 +55,6 @@ std::cin.ignore(10000, '\n'); // Flushes out leftover buffer text
 
 }
 
+
+
+c++ dont initialize variables to zero, some garbage only

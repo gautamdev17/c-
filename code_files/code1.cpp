@@ -11,6 +11,8 @@ int main(){
     // HOW TO GET USER INPUT?
     char x{};
     int y{},z{},a{};
+    //sizeof function
+    std::cout<<sizeof(x)<<','<<sizeof(y)<<','<<sizeof(z)<<',';
     std::cout<<"Enter character\n";
     std::cin>>x;//cin = single character input, >> is the extraction operator
     std::cout<<"you entered "<<x<<'\n';
